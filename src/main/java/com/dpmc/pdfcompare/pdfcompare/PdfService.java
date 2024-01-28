@@ -15,6 +15,7 @@ import java.nio.file.StandardCopyOption;
 @Service
 public class PdfService {
 
+    public String RESULT_FILE_PATH = "D:\\pdfcompareapp\\files\\Compared";
     public String comparePdfs(
             MultipartFile file1,
             MultipartFile file2
@@ -22,7 +23,7 @@ public class PdfService {
         String path1 = saveFile(file1);
         String path2 = saveFile(file2);
 
-        String resultFile = "D:\\pdfcompareapp\\files\\Compared";
+        String resultFile = RESULT_FILE_PATH;
 
         try {
             PdfComparator pdfComparator = new PdfComparator(path1, path2);
