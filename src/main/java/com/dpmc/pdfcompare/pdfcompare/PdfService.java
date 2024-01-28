@@ -35,6 +35,7 @@ public class PdfService {
         } finally {
             deleteFile(path1);
             deleteFile(path2);
+            System.out.println("Files deleted");
         }
     }
 
